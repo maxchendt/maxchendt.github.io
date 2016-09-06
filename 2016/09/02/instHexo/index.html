@@ -3,27 +3,21 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>安装 Hexo | 灯塔 · 随记随想</title>
+  <title>自学 Hexo 搭建 GitHub 免费 Blog | 灯塔 · 随记随想</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="尝试使用Hexo，边摸索边记录。在 Ubuntu 16.04 里面，需要先安装 Git 和 Node.js 环境。 
-Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网站的说明
-安装 Git1sudo apt install git
-跟从 https://pages.github.com/ 的提示，我建立了 https://maxchendt.github.io">
+  <meta name="description" content="尝试使用 Hexo，边摸索边记录。在 Ubuntu 16.04 里面，需要先安装 Git 和 Node.js 环境。 安装完 Hexo 后，开始进行摸索，比如增加数学公式的支持，还有定制等方面的工作，这些工作将留给下一篇博文。
+准备工作本文假设本地操作系统为 Ubuntu 16.04 版本，工作目录为 /2T/smb/git 。此外，已经注册了 GitHub 户头，这里假设用户名为 maxchen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装 Hexo">
+<meta property="og:title" content="自学 Hexo 搭建 GitHub 免费 Blog">
 <meta property="og:url" content="https://maxchendt.github.io/2016/09/02/instHexo/index.html">
 <meta property="og:site_name" content="灯塔 · 随记随想">
-<meta property="og:description" content="尝试使用Hexo，边摸索边记录。在 Ubuntu 16.04 里面，需要先安装 Git 和 Node.js 环境。 
-Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网站的说明
-安装 Git1sudo apt install git
-跟从 https://pages.github.com/ 的提示，我建立了 https://maxchendt.github.io">
-<meta property="og:updated_time" content="2016-09-03T16:50:39.300Z">
+<meta property="og:description" content="尝试使用 Hexo，边摸索边记录。在 Ubuntu 16.04 里面，需要先安装 Git 和 Node.js 环境。 安装完 Hexo 后，开始进行摸索，比如增加数学公式的支持，还有定制等方面的工作，这些工作将留给下一篇博文。
+准备工作本文假设本地操作系统为 Ubuntu 16.04 版本，工作目录为 /2T/smb/git 。此外，已经注册了 GitHub 户头，这里假设用户名为 maxchen">
+<meta property="og:updated_time" content="2016-09-06T14:22:34.470Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装 Hexo">
-<meta name="twitter:description" content="尝试使用Hexo，边摸索边记录。在 Ubuntu 16.04 里面，需要先安装 Git 和 Node.js 环境。 
-Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网站的说明
-安装 Git1sudo apt install git
-跟从 https://pages.github.com/ 的提示，我建立了 https://maxchendt.github.io">
+<meta name="twitter:title" content="自学 Hexo 搭建 GitHub 免费 Blog">
+<meta name="twitter:description" content="尝试使用 Hexo，边摸索边记录。在 Ubuntu 16.04 里面，需要先安装 Git 和 Node.js 环境。 安装完 Hexo 后，开始进行摸索，比如增加数学公式的支持，还有定制等方面的工作，这些工作将留给下一篇博文。
+准备工作本文假设本地操作系统为 Ubuntu 16.04 版本，工作目录为 /2T/smb/git 。此外，已经注册了 GitHub 户头，这里假设用户名为 maxchen">
   
     <link rel="alternate" href="/atom.xml" title="灯塔 · 随记随想" type="application/atom+xml">
   
@@ -34,8 +28,6 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-  
-
 </head>
 
 <body>
@@ -63,7 +55,7 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://maxchendt.github.io"></form>
@@ -86,7 +78,7 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
         
   
     <h1 class="article-title" itemprop="name">
-      安装 Hexo
+      自学 Hexo 搭建 GitHub 免费 Blog
     </h1>
   
 
@@ -94,23 +86,70 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>尝试使用Hexo，边摸索边记录。在 Ubuntu 16.04 里面，需要先安装 Git 和 Node.js 环境。 </p>
-<h2 id="Git-和-Node-js-的安装"><a href="#Git-和-Node-js-的安装" class="headerlink" title="Git 和 Node.js 的安装"></a>Git 和 Node.js 的安装</h2><p>Git 的安装比较简单，Node.js 需要参考其网站的说明</p>
-<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt install git</div></pre></td></tr></table></figure>
-<p>跟从 <a href="https://pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a> 的提示，我建立了 <a href="https://maxchendt.github.io/">https://maxchendt.github.io/</a> , 并用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/maxchendt/maxchendt.github.io</div><div class="line"><span class="built_in">cd</span> maxchendt.github.io/</div><div class="line"><span class="built_in">echo</span> <span class="string">"建设中..."</span> &gt; index.html</div><div class="line">git add --all</div></pre></td></tr></table></figure></p>
-<p>此时需要用如下命令设置 创建 github 户头使用的 email<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.email <span class="string">"you@example.com"</span></div><div class="line">git config --global user.name <span class="string">"Your Name"</span></div></pre></td></tr></table></figure></p>
+<!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开通博客站点"><span class="toc-number">1.1.</span> <span class="toc-text">开通博客站点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Git"><span class="toc-number">1.2.</span> <span class="toc-text">安装 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Node-js"><span class="toc-number">1.3.</span> <span class="toc-text">安装 Node.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-安装与使用"><span class="toc-number">2.</span> <span class="toc-text">Hexo 安装与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Hexo"><span class="toc-number">2.1.</span> <span class="toc-text">安装 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启用-Hexo"><span class="toc-number">2.2.</span> <span class="toc-text">启用 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备开博啦"><span class="toc-number">2.3.</span> <span class="toc-text">准备开博啦</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初识-Markdown"><span class="toc-number">3.</span> <span class="toc-text">初识 Markdown</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑器"><span class="toc-number">3.1.</span> <span class="toc-text">编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提醒"><span class="toc-number">3.2.</span> <span class="toc-text">提醒</span></a></li></ol></li></ol>
+  </div>
+
+        <p>尝试使用 Hexo，边摸索边记录。在 Ubuntu 16.04 里面，需要先安装 Git 和 Node.js 环境。 安装完 Hexo 后，开始进行摸索，比如增加数学公式的支持，还有定制等方面的工作，这些工作将留给下一篇博文。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>本文假设本地操作系统为 Ubuntu 16.04 版本，工作目录为 <code>/2T/smb/git</code> 。此外，已经注册了 GitHub 户头，这里假设用户名为 <code>maxchendt</code> . 开通博客需要先开启 maxchendt.github.io 站点，安装 Hexo 需要本地系统有 Git 和 Node.js, Git 的安装比较简单，Node.js 需要参考其网站的说明。</p>
+<h3 id="开通博客站点"><a href="#开通博客站点" class="headerlink" title="开通博客站点"></a>开通博客站点</h3><p>登录 <a href="https://github.com" target="_blank" rel="external">GitHub</a>，在主页右下角点击 <a href="https://github.com/new" target="_blank" rel="external">New repository</a> , 新建的 repository 名字必须是 <code>用户名.github.io</code>，例如本文的 maxchendt.github.io 。创建时选择 ‘Initialize this repository with a README’，以便浏览 <a href="https://github.com/maxchendt/maxchendt.github.io" target="_blank" rel="external">https://github.com/maxchendt/maxchendt.github.io</a> 时能看到说明 (即 README.md 文件的内容，以后进一步修改充实)。此时浏览 <a href="https://maxchendt.github.io">https://maxchendt.github.io</a> 将出现 404，因为还没有内容。</p>
+<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><p>使用 Ubuntu 的安装软件包命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt install git</div></pre></td></tr></table></figure></p>
+<p>跟随 <a href="https://pages.github.com" target="_blank" rel="external">https://pages.github.com</a> 的提示，我先让 <a href="https://maxchendt.github.io">https://maxchendt.github.io</a>  活起来<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#cd /2T/smb/git	#请确认工作目录</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/maxchendt/maxchendt.github.io</div><div class="line"><span class="built_in">cd</span> maxchendt.github.io/</div><div class="line"><span class="built_in">echo</span> <span class="string">"建设中..."</span> &gt; index.html</div><div class="line">git add --all</div></pre></td></tr></table></figure></p>
+<p>此时需要用如下命令设置 GitHub 户头用户名以及使用的 email<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name <span class="string">"maxchendt"</span></div><div class="line">git config --global user.email <span class="string">"maxchendt@ho.me"</span></div></pre></td></tr></table></figure></p>
 <p>然后推送<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git commit -m <span class="string">"Initial commit"</span></div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
-<p>浏览器就可以浏览 <a href="https://maxchendt.github.io/">https://maxchendt.github.io/</a> 网站了。页面显示结果为 “建设中…”(无双引号)</p>
-<p><a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a>    v4.5.0 LTS    Recommended For Most Users<br><a href="https://github.com/nodesource/distributions#deb" target="_blank" rel="external">https://github.com/nodesource/distributions#deb</a><br>curl -sL <a href="https://deb.nodesource.com/setup_4.x" target="_blank" rel="external">https://deb.nodesource.com/setup_4.x</a> | sudo -E bash -<br>sudo apt-get install -y nodejs</p>
-<p>Simple inline $a = b + c$.  and block math $$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$<br>还是自己推送吧</p>
-<p>hexo g -d 真混蛋，全部del，自己推送<br>干掉repository, 重新建立<br>熬夜了</p>
+<p>浏览器就可以浏览 <a href="https://maxchendt.github.io/">https://maxchendt.github.io/</a> 网站了。页面显示结果为 “建设中…”(无双引号)。此时浏览 <a href="https://github.com/maxchendt/maxchendt.github.io" target="_blank" rel="external">https://github.com/maxchendt/maxchendt.github.io</a> ， 便能看到刚上传的 <code>index.html</code> 文件。</p>
+<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><p>参见 <a href="https://github.com/nodesource/distributions#deb" target="_blank" rel="external">https://github.com/nodesource/distributions#deb</a> ，安装命令为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-s</span>L https://deb.nodesource.com/setup_4.x | sudo -E bash -</div><div class="line">sudo apt-get install -y nodejs</div></pre></td></tr></table></figure></p>
+<p>将安装 Node.js 的 4.x 序列， 也就是 <a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a> 推荐给大多数用户的 v4.5.0 LTS (Recommended For Most Users).</p>
+<h2 id="Hexo-安装与使用"><a href="#Hexo-安装与使用" class="headerlink" title="Hexo 安装与使用"></a>Hexo 安装与使用</h2><p>我是从 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a> 开始的：“Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。” 想要快速地学会 Hexo 让她动起来，建议直接上 <a href="https://github.com/hexojs/hexo" target="_blank" rel="external">https://github.com/hexojs/hexo</a> 速成。</p>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>有了Git 和 Node.js，现在可以安装  Hexo 了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
+<p>就这么简单，没有什么高难度的东西。</p>
+<h3 id="启用-Hexo"><a href="#启用-Hexo" class="headerlink" title="启用 Hexo"></a>启用 Hexo</h3><p>使用 Hexo 来创建博客，先初始化网站架构 (本地)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#cd /2T/smb/git	#请确认工作目录</span></div><div class="line">hexo init ./hexo</div><div class="line"><span class="built_in">cd</span> hexo/</div></pre></td></tr></table></figure></p>
+<p>Hexo 在当前目录的 <code>hexo</code> 子目录下，创建基本的网站架构，保护大量的文件和子目录（主题，配置文件和模块等，参见 <a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/setup.html</a> ）。实际上，一个网站已经成型了：要浏览的话，使用如下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server -p 4400</div></pre></td></tr></table></figure></p>
+<p>浏览 <a href="http://localhost:4400/" target="_blank" rel="external">http://localhost:4400/</a> 就看到了！这里我使用端口 4400  (<code>-p 4400</code>)，因为端口4000被其他程序占用。</p>
+<h3 id="准备开博啦"><a href="#准备开博啦" class="headerlink" title="准备开博啦"></a>准备开博啦</h3><p>参考 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a> 进行配置。我只修改了  <code>hexo/_config.yml</code> 里面很少的配置 (<code>title author url</code> 等)</p>
+<blockquote>
+<p> # Site<br> title: 灯塔 · 随记随想<br> author: CHEN Deng-Ta<br> # URL<br> url: <a href="https://maxchendt.github.io/">https://maxchendt.github.io/</a></p>
+</blockquote>
+<p>好了，我们开始<strong>创建第一份博文</strong>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new  instHexo</div></pre></td></tr></table></figure></p>
+<p>Hexo 将在 <code>hexo/source/_posts</code> 目录下创建 <code>instHexo.md</code> 文件 (Markdown 轻量级标记语言)，然后可以使用 <a href="https://remarkableapp.github.io/" target="_blank" rel="external">Remarkable</a> 进行编辑，有关该软件，稍后再进行介绍。当然，如果您迫不及待，可以先看下这个不到三分钟的视频：<a href="https://youtu.be/UpjAIcXti9s" target="_blank" rel="external">https://youtu.be/UpjAIcXti9s</a> 。本地查看博客的效果<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g; hexo s -p 4400</div></pre></td></tr></table></figure></p>
+<p>浏览 <a href="http://localhost:4400/" target="_blank" rel="external">http://localhost:4400/</a>  ， 是的，不小的成就！修改满意就可以发布了。发布博客，<span style="color:red"><strong>不</strong></span>建议使用 <code>hexo deploy -g</code> 方式，该方式有如下麻烦</p>
+<ol>
+<li>需要先安装模块， <code>npm install hexo-deployer-git --save</code></li>
+<li>需要在 GitHub 先导入 ssh key, 参考 <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank" rel="external">https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/</a></li>
+<li>让我不能忍受的，会把我的 maxchendt.github.io 清空，包括原始创立的 README.md 文件。而且，每次更新时，不是差分更新，而是先清空，再上传全部(也许是我不懂得设置)。</li>
+</ol>
+<p>因此，我决定采用git方式，采用如下<code>deploy.sh</code>脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"></div><div class="line"><span class="built_in">cd</span> /2T/smb/git/hexo</div><div class="line">hexo generate</div><div class="line"><span class="built_in">cd</span> ..</div><div class="line">cp -R hexo/public/* maxchendt.github.io/</div><div class="line"><span class="built_in">cd</span> maxchendt.github.io</div><div class="line">git add --all</div><div class="line">git commit -m <span class="string">"<span class="variable">$1</span>"</span></div><div class="line">git push -u origin master</div></pre></td></tr></table></figure></p>
+<p>该脚本放在工作目录<code>/2T/smb/git</code>下 (与目录<code>hexo</code>和<code>maxchendt.github.io</code>同层次)，使用方法如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./deploy.sh <span class="string">"change only one md"</span></div></pre></td></tr></table></figure></p>
+<p>其中参数 “change only one md” 将显示在 GitHub 的 commit (例如 <a href="https://github.com/maxchendt/maxchendt.github.io/commits/master" target="_blank" rel="external">https://github.com/maxchendt/maxchendt.github.io/commits/master</a>) 中。该参数给出每次 commit 的简要描述，内容根据当时的情况修改。浏览 <a href="https://maxchendt.github.io">https://maxchendt.github.io</a> , 第一份博文成功！</p>
+<h2 id="初识-Markdown"><a href="#初识-Markdown" class="headerlink" title="初识 Markdown"></a>初识 Markdown</h2><p>写博客使用的是 Markdown 这种轻量级的标记语言， 相对与 html 来说，轻量级标记语言如 Markdown 是对人友好的标记语言，即使第一次接触，也可以毫无障碍地理解其中的内容。</p>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Markdown#Example" target="_blank" rel="external">https://en.wikipedia.org/wiki/Markdown#Example</a> 给出了简单的对比例子</li>
+<li>这个 <a href="https://jonschlinkert.github.io/remarkable/demo/" target="_blank" rel="external">Remarkable demo live</a> 也建议参考一下</li>
+<li>我在这个网站练习了一下，<a href="http://www.markdowntutorial.com/" target="_blank" rel="external">十分钟学习Markdown</a></li>
+</ol>
+<h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3><p>我推荐使用的 Markdown 文件编辑器是 <a href="https://remarkableapp.github.io/" target="_blank" rel="external">Remarkable</a> ， 尽管当前还没有 Search &amp; Replace 功能，参见 <a href="https://github.com/jamiemcg/Remarkable/issues/46" target="_blank" rel="external">https://github.com/jamiemcg/Remarkable/issues/46</a>    , 开发者已经优先考虑了，应该很快就会有。感兴趣的话，您可以参与开发，项目在 <a href="https://github.com/jamiemcg/Remarkable" target="_blank" rel="external">https://github.com/jamiemcg/Remarkable</a>  。</p>
+<p>有必要提醒的是， <a href="https://github.com/jonschlinkert/remarkable" target="_blank" rel="external">https://github.com/jonschlinkert/remarkable</a>  项目中的是 parser，不是编辑器。</p>
+<h3 id="提醒"><a href="#提醒" class="headerlink" title="提醒"></a>提醒</h3><p>这里报告几点编写本文的心得</p>
+<ol>
+<li>距离就是美，记得 标记 <span style="color:blue"><code># &gt;</code></span> 等之后，要有空格</li>
+<li>代码块的结尾标记 <span style="color:blue"> <code>``` </code> </span> 之后不能有空格，否则 Hexo 生成后，该位置之后的显示会出现异常，比如代码块没有编号等。</li>
+</ol>
+<hr>
+<p><strong>更新历史</strong><br>2016-09-06 22:14    完稿、重新发布<br>2016-09-02 20:56    初稿</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://maxchendt.github.io/2016/09/02/instHexo/" data-id="cisna3kms00005r4p22zzcnmt" class="article-share-link">Share</a>
+      <a data-url="https://maxchendt.github.io/2016/09/02/instHexo/" data-id="cisof46710000944pbnt6ez36" class="article-share-link">Teilen</a>
+      
+        <a href="https://maxchendt.github.io/2016/09/02/instHexo/#disqus_thread" class="article-comment-link">Kommentare</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具-博客/">工具.博客</a></li></ul>
+
     </footer>
   </div>
   
@@ -118,6 +157,12 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
   
 </article>
 
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -126,13 +171,27 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具-博客/">工具.博客</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/工具-博客/" style="font-size: 10px;">工具.博客</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
     </div>
@@ -142,12 +201,12 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2016/09/02/instHexo/">安装 Hexo</a>
+            <a href="/2016/09/02/instHexo/">自学 Hexo 搭建 GitHub 免费 Blog</a>
           </li>
         
       </ul>
@@ -176,6 +235,20 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
   
 </nav>
     
+<script>
+  var disqus_shortname = 'maxchendt';
+  
+  var disqus_url = 'https://maxchendt.github.io/2016/09/02/instHexo/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -185,6 +258,51 @@ Git 和 Node.js 的安装Git 的安装比较简单，Node.js 需要参考其网�
 
 
 <script src="/js/script.js"></script>
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $article = $(".article-entry");
+  var count = [0, 0, 0, 0, 0, 0];
+  var mark = [0, 0, 0, 0, 0, 0];
+
+  (function setMark(){
+    var hTag = ["h1", "h2", "h3", "h4", "h5", "h6"];
+    var index = 0;
+    for (var i = 0; i < 6; ++i) {
+      if ($article.children(hTag[i]).length > 0) {
+        ++index;
+        mark[i] = index;
+      }
+    }
+  })();
+
+  $article.children(":header").each(function(){
+    var t = $(this);
+    var pos = 0;
+    switch (t[0].tagName) {
+      case "H1": pos = 0; break;
+      case "H2": pos = 1; break;
+      case "H3": pos = 2; break;
+      case "H4": pos = 3; break;
+      case "H5": pos = 4; break;
+      case "H6": pos = 5; break;
+    }
+
+    var len = mark[pos];
+    if (len < 6) { count[len] = 0; }
+    count[len - 1]++;
+
+    var listStr = count[0] + "";
+    for (var i = 1; i < len; ++i) { listStr += "." + count[i]; }
+    listStr += " ";
+    t.html(listStr + t.html());
+  });
+});
+</script>
+
 
   </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
