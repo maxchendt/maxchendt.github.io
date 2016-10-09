@@ -1,0 +1,709 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo,NexT 主题,MathJax,脚注 tooltip," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="本博文讨论 NexT 主题的改造: 主题配置文件的个性化修改；CSS 定制段落首行缩进等；以及 JavaScript 实现 MathJax, 侧边栏的便捷关闭， 标题自动编号， 特定段落首行不缩进， 和脚注 tip 显示。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NexT 主题私人定制">
+<meta property="og:url" content="https://maxchendt.github.io/Blog/20161007NextSet.html">
+<meta property="og:site_name" content="灯塔 · 随记随想">
+<meta property="og:description" content="本博文讨论 NexT 主题的改造: 主题配置文件的个性化修改；CSS 定制段落首行缩进等；以及 JavaScript 实现 MathJax, 侧边栏的便捷关闭， 标题自动编号， 特定段落首行不缩进， 和脚注 tip 显示。">
+<meta property="og:updated_time" content="2016-10-09T13:37:53.752Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NexT 主题私人定制">
+<meta name="twitter:description" content="本博文讨论 NexT 主题的改造: 主题配置文件的个性化修改；CSS 定制段落首行缩进等；以及 JavaScript 实现 MathJax, 侧边栏的便捷关闭， 标题自动编号， 特定段落首行不缩进， 和脚注 tip 显示。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://maxchendt.github.io/Blog/20161007NextSet.html"/>
+
+
+  <title> NexT 主题私人定制 | 灯塔 · 随记随想 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="default">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">灯塔 · 随记随想</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                NexT 主题私人定制
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-07T19:35:28+08:00" content="2016-10-07">
+              2016-10-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Blog/20161007NextSet.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Blog/20161007NextSet.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>“精于心，简于形”，<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT 主题</a>是简洁优雅的，本博客将居于该主题，进行私人定制。 本文的全部配置打包为 <a href="/files/HexoNext.tar.xz">HexoNext.tar.xz</a>, 解开后执行 <code>./fixNext.sh /hexo-dir/themes/next</code> , 将实现</p>
+<ol style="list-style-type: decimal">
+<li>NexT 主题个性定制: 菜单设置，启用 Mist scheme, Sidebar 设置为隐藏, 以及启用 Disqus 留言评论功能</li>
+<li>JS 方式定制：纯 JavaScript 方式实现 MathJax, 侧边栏的便捷关闭, 标题自动编号, 特定段落首行不缩进, 和脚注 tip 显示</li>
+<li>CSS 定制： 段落首行缩进, 脚注, 脚注 Tip, 块引用, 代码块加圆角, 行内代码颜色</li>
+</ol>
+<p>ooNoIndent00在进行定制之前，需要说明的是，<a href="/Blog/20160907HexoSet.html">Hexo Blog 网站初步定制</a> 的部分内容，对 NexT 主题的定制也是有参考价值的的，例如：</p>
+<ul>
+<li><a href="/Blog/20160907HexoSet.html#架构配置">架构配置</a></li>
+<li><a href="/Blog/20160907HexoSet.html#更换渲染器">pandoc 渲染器</a>, 本博客采用 Markdown 文本写作，使用 Hexo 调用 pandoc 渲染 md 文件</li>
+<li><a href="/Blog/20160907HexoSet.html#留言评论">留言评论</a></li>
+<li><a href="/Blog/20160907HexoSet.html#缓存密码">缓存密码</a></li>
+<li><a href="/Blog/20160907HexoSet.html#read-more-按钮">Read More 按钮</a></li>
+</ul>
+<h2 id="主题配置修改">主题配置修改</h2>
+<p>首先，需要定制好架构，参见 <a href="/Blog/20160907HexoSet.html#hexo-基本定制">Hexo 基本定制</a>: 记得改用 pandoc 渲染器, 以及启用 NexT 主题。 如下命令实现架构设定，并启用 NexT 主题</p>
+<pre><code>./HexoSite.sh /hexo-dir next</code></pre>
+<p>ooNoIndent00然后，进行 NexT 主题私人定制 <code>./fixNext.sh /hexo-dir/themes/next</code>，其中主题配置部分的主要修改为</p>
+<ul>
+<li>菜单设置为 “Home Categories Tags Archives About” 的顺序</li>
+<li>默认的 Muse scheme 改为 Mist scheme</li>
+<li>修改 Sidebar 的默认行为，原先为进入博文页面自动打开侧栏, 改为隐藏侧栏，只有主动点击 Sidebar 按钮时，才弹出侧栏</li>
+<li>配置文件中启用 Disqus 留言评论功能，还需要其他工作，具体参考<a href="/Blog/20160907HexoSet.html#留言评论">留言评论</a></li>
+</ul>
+<h2 id="javascript-定制">JavaScript 定制</h2>
+<p>自己编写了 <code>custom.js</code>, 通过 JavaScript 实现一些特定的功能，例如有些段落的首行不缩进，鼠标停留在脚注标记上时将弹出 tooltip 显示脚注内容等。</p>
+<h3 id="mathjax">MathJax</h3>
+<p>在 <a href="/Blog/20160907HexoSet.html#数学">Hexo Blog 网站初步定制</a>中， MathJax 是通过插入代码片段实现的，每个博文页面都需要包含该片段。为了减少流量，遵照 <a href="http://docs.mathjax.org/en/latest/configuration.html" target="_blank" rel="external">Loading and Configuring MathJax</a> 的指引，这里我们改成纯 JavaScript 代码，对于整个博客网站，只需要载入一次，任何页面都不需要重复载入。</p>
+<h3 id="侧边栏的关闭">侧边栏的关闭</h3>
+<p>侧边栏 (Sidebar) 如果打开，NexT 主题默认情况下，需要点击关闭按钮方能关闭。参考 <a href="https://github.com/iissnan/hexo-theme-next/issues/947" target="_blank" rel="external">theme-next issues/947</a> 的代码，使得侧边栏的关闭更加方便：边栏内非链接区或者边栏外点击，即可关闭侧边栏。</p>
+<h3 id="章节编号">章节编号</h3>
+<p>与 landscape 定制时的<a href="/Blog/20160907HexoSet.html#章节编号">章节编号</a>并没有本质的区别，只是那里每个页面都需要载入代码片段，这里采用 js 文件实现后，无需重复载入。</p>
+<h3 id="特定段落不缩进">特定段落不缩进</h3>
+<p>对于中文的出版物，无论是纸质的还是电子的，习惯上段落的首行缩进两个字符<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>。可是像段落中间插入行间公式 (display formula) 或者行间代码，随后的文字是同一段落的，不应该缩进。因此，对于不需要缩进的段落，采用特定标志 <code>ooNoIndent00</code> 添加在段落的最前面，js 预处理去掉该标志，并设置不缩进。</p>
+<h3 id="弹出-tip-显示脚注">弹出 tip 显示脚注</h3>
+<p>网页显示方式，来回跳转去读脚注的方式<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>，让人不爽。因此，我参考了 <a href="http://ignorethecode.net/blog/2010/04/20/footnotes/" target="_blank" rel="external">Lukas Mathis 的 Footnotes</a> 并进行改造，得到自己希望的形式：</p>
+<ul>
+<li>默认在正下方</li>
+<li>如果下方被遮挡，换到正上方</li>
+<li>如果左边超出边界，平移使得左边进入窗口</li>
+<li>如果右边超出窗口，平移使得右边进入窗口 (如果浏览器窗口太小，此时可能左边溢出窗口)</li>
+</ul>
+<p>ooNoIndent00更漂亮的 tooltip 显示如 <a href="https://en.wikipedia.org/wiki/2013_Northeastern_China_smog#cite_ref-ccrecord_2-1" target="_blank" rel="external">2013 Northeastern China smog</a>, 简直太棒了：鼠标放在引用 2 时，reference 里面的对应条目被加亮；在引用 16 上则弹出 tooltip，而且可以进入 tooltip 里面点击链接。wiki 的 js 代码有点长，研究了一会，我就放弃了。</p>
+<p>由于没有学过 JavaScript, 对 jQuery 更是陌生，凭感觉改代码。这里特别感谢 <a href="https://stackoverflow.com/questions/39558138" target="_blank" rel="external">stackoverflow:39558138</a> 和 <a href="https://stackoverflow.com/questions/39564117" target="_blank" rel="external">stackoverflow:39564117</a> 里面热心的朋友。</p>
+<h2 id="css-定制">CSS 定制</h2>
+<p>通过 CSS 样式，实现了段落首行缩进，脚注的格式，脚注 Tip 显示外观，块引用、代码块加圆角、行内代码颜色等的定制。详细的内容在 <code>custom.styl</code> 文件里面。</p>
+<p>此外，NexT 主题的定制中，我们还修改了</p>
+<ul>
+<li>链接的颜色，默认的有点暗淡，改为鲜明一些的</li>
+<li><a href="/Blog/20160907HexoSet.html#youtube-视频">youtube 视频</a>：让 Youtube iframe<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> 不 Responsive，而使用 <code> {% youtube RiF6m3InMRM %} </code> 则根据屏幕大小自动调整视频框大小。甚至是图文环绕 <iframe style="float: right;position: relative;right 50%;text-align: left;" width="320" height="180" src="https://www.youtube.com/embed/RiF6m3InMRM" frameborder="0" allowfullscreen></iframe></li>
+<li><a href="/Blog/20160907HexoSet.html#read-more-按钮">Read More 按钮</a>：由 <code>description</code> 字段提供简介时, 增加段落首行缩进</li>
+</ul>
+<hr>
+<p><strong>后言</strong></p>
+<p>“百闻不如一见，百见不如一做”，是啊，做的过程会有更真切的体验。今天发现，这“一做”又不如“一博”，什么意思呢？<code>fixNext.sh</code> 代码写完了，也测试了，再通过写博文进行整理总结，还是能看到一些细节问题，进行修复和提升。</p>
+<p>写程序，一定要整理出文档。</p>
+<p>不是说博客要用来为教学和科研服务吗？唉，惭愧！<span style="color:blue">只能说磨刀不负砍柴工了</span>。</p>
+<p>还有一点，我对我现在的博客网站挺满意的。有人看了有点羡慕和惊叹，其实不必，只需要半个月的时间，就从门外汉到做出这样的博客网站了。时间真的只需要两星期，但更需要的，是开放的心态和常驻的好奇心，敢于了解新知识，不让自己停留在<a href="https://zh.wikipedia.org/wiki/%E8%88%92%E9%80%82%E5%8C%BA" target="_blank" rel="external">心理舒适区</a>的勇气，从而与时俱进，持久弥新。其实，我学习新知识，以及思考有疑问的知识点时，研究起来内心总是愉悦的。</p>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn1"><p>不少人偷懒，首行不缩进，采用较大的段落间距，实现视觉感官的段落，并美之名曰：“时代在发展，···，开始摒弃锻炼首行缩进” 等等；甚至说缩进缺乏美感等。一句话，懒或者是无知，就不要找借口了。<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>再也不需要跳来跳去了。<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p><a href="https://github.com/iissnan/hexo-theme-next/issues/824" target="_blank" rel="external">theme-next issues/824</a>: NexT 主题使用 JavaScript 在前端对视频做一层包装处理。但我需要指定大小的 iframe, 只好修改其 <code>utils.js</code> 文件。<a href="#fnref3">↩</a></p></li>
+</ol>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/NexT-主题/" rel="tag">#NexT 主题</a>
+          
+            <a href="/tags/MathJax/" rel="tag">#MathJax</a>
+          
+            <a href="/tags/脚注-tooltip/" rel="tag">#脚注 tooltip</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Blog/20160910TDayA.html" rel="next" title="教师节乱想">
+                <i class="fa fa-chevron-left"></i> 教师节乱想
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CHEN Deng-Ta" />
+          <p class="site-author-name" itemprop="name">CHEN Deng-Ta</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主题配置修改"><span class="nav-number">1.</span> <span class="nav-text">主题配置修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-定制"><span class="nav-number">2.</span> <span class="nav-text">JavaScript 定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mathjax"><span class="nav-number">2.1.</span> <span class="nav-text">MathJax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#侧边栏的关闭"><span class="nav-number">2.2.</span> <span class="nav-text">侧边栏的关闭</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#章节编号"><span class="nav-number">2.3.</span> <span class="nav-text">章节编号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特定段落不缩进"><span class="nav-number">2.4.</span> <span class="nav-text">特定段落不缩进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#弹出-tip-显示脚注"><span class="nav-number">2.5.</span> <span class="nav-text">弹出 tip 显示脚注</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css-定制"><span class="nav-number">3.</span> <span class="nav-text">CSS 定制</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHEN Deng-Ta</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'maxchendt';
+      var disqus_identifier = 'Blog/20161007NextSet.html';
+      var disqus_title = "NexT 主题私人定制";
+      var disqus_url = 'https://maxchendt.github.io/Blog/20161007NextSet.html';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+<script type="text/javascript" src="/js/custom.js"></script>
+</body>
+</html>

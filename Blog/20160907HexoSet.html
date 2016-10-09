@@ -1,108 +1,335 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title>Hexo Blog 网站初步定制 | 灯塔 · 随记随想</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本博文主要讨论 Hexo 默认的 landscape 主题下进行定制: 基础定制部分介绍了网站的架构配置, 以及启用 pandoc 渲染。主题定制方面，介绍了数学公式显示、留言评论、博文章节编号、目录，主区域布局调整和显示样式等的调整。">
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo,landscape 主题,LaTeX,评论," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="本博文主要讨论 Hexo 默认的 landscape 主题下进行定制: 基础定制部分介绍了网站的架构配置, 以及启用 pandoc 渲染。主题定制方面，介绍了数学公式显示、留言评论、博文章节编号、目录，主区域布局调整和显示样式等的调整。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo Blog 网站初步定制">
 <meta property="og:url" content="https://maxchendt.github.io/Blog/20160907HexoSet.html">
 <meta property="og:site_name" content="灯塔 · 随记随想">
 <meta property="og:description" content="本博文主要讨论 Hexo 默认的 landscape 主题下进行定制: 基础定制部分介绍了网站的架构配置, 以及启用 pandoc 渲染。主题定制方面，介绍了数学公式显示、留言评论、博文章节编号、目录，主区域布局调整和显示样式等的调整。">
-<meta property="og:updated_time" content="2016-10-01T13:50:50.184Z">
+<meta property="og:updated_time" content="2016-10-09T14:03:32.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog 网站初步定制">
 <meta name="twitter:description" content="本博文主要讨论 Hexo 默认的 landscape 主题下进行定制: 基础定制部分介绍了网站的架构配置, 以及启用 pandoc 渲染。主题定制方面，介绍了数学公式显示、留言评论、博文章节编号、目录，主区域布局调整和显示样式等的调整。">
-  
-    <link rel="alternate" href="/atom.xml" title="灯塔 · 随记随想" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
 
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://maxchendt.github.io/Blog/20160907HexoSet.html"/>
+
+
+  <title> Hexo Blog 网站初步定制 | 灯塔 · 随记随想 </title>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">灯塔 · 随记随想</a>
-      </h1>
+<body itemscope itemtype="//schema.org/WebPage" lang="default">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">灯塔 · 随记随想</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://maxchendt.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-HexoSet" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/Blog/20160907HexoSet.html" class="article-date">
-  <time datetime="2016-09-07T02:15:13.000Z" itemprop="datePublished">2016-09-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-  </div>
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hexo Blog 网站初步定制
-    </h1>
+      
+    </ul>
   
 
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo Blog 网站初步定制
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-07T10:15:13+08:00" content="2016-09-07">
+              2016-09-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Blog/20160907HexoSet.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Blog/20160907HexoSet.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-<!-- Table of Contents -->
+      
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-基本定制"><span class="toc-number">1.</span> <span class="toc-text">Hexo 基本定制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#架构配置"><span class="toc-number">1.1.</span> <span class="toc-text">架构配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更换渲染器"><span class="toc-number">1.2.</span> <span class="toc-text">更换渲染器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#landscape-主题定制"><span class="toc-number">2.</span> <span class="toc-text">Landscape 主题定制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数学"><span class="toc-number">2.1.</span> <span class="toc-text">数学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#留言评论"><span class="toc-number">2.2.</span> <span class="toc-text">留言评论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#章节编号"><span class="toc-number">2.3.</span> <span class="toc-text">章节编号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布局和样式"><span class="toc-number">2.4.</span> <span class="toc-text">布局和样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小技巧"><span class="toc-number">3.</span> <span class="toc-text">小技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#youtube-视频"><span class="toc-number">3.1.</span> <span class="toc-text">youtube 视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#临时免密码"><span class="toc-number">3.2.</span> <span class="toc-text">临时免密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#read-more-按钮"><span class="toc-number">3.3.</span> <span class="toc-text">Read More 按钮</span></a></li></ol></li></ol>
-  </div>
-
-        <p>本博文讨论 Hexo 的网站架构设置，以及默认的 landscape 主题定制。实际上，本博客网站已经全面转换到 Next 主题了。为了让喜欢 landscape 主题的人留个参考，也是让我自己的自学过程留点痕迹。</p>
-<p>为了清晰概念，我把 Blog 网站的整体配置分为两部分: 架构配置，以及主题配置。本博文中分别对应于 <code>hexo/</code> 目录和 <code>hexo/themes/landscape</code> 里的 <code>_config.yml</code> 文件。</p>
+      
+        <p>本博文讨论 Hexo 的网站架构设置，以及默认的 landscape 主题定制。实际上，本博客网站已经全面转换到 NexT 主题了。保留本文是为了让喜欢 landscape 主题的人留个参考，也是让我自己的自学过程留点痕迹。</p>
+<p>为了清晰概念，我把 Blog 网站的整体配置分为两部分: 架构配置，以及主题配置。本博文中分别对应于 <code>/hexo-dir</code> (代表 <code>/2T/smb/git/hexo</code>) 目录和 <code>/hexo-dir/themes/landscape</code> 里的 <code>_config.yml</code> 文件。</p>
 <h2 id="hexo-基本定制">Hexo 基本定制</h2>
 <p>Hexo 使用 yml 文件来设定网站的架构，架构配置文件可以设定网站的标题 (title)、外观主题 (there)，以及博文的URL等等。此外，为了扩展 md 的功能，本博客不采用 Hexo 默认的渲染器，而是采用功能极其强大又易用的 pandoc 渲染器。 <a id="more"></a></p>
 <h3 id="架构配置">架构配置</h3>
-<p>网站的架构配置文件为 <code>hexo/_config.yml</code> 文件，在 <a href="/Blog/20160902instHexo.html#准备开博啦">自学 Hexo 搭建 GitHub 免费 Blog</a> 里只是简单的修改，这里给出更完整的脚本 <code>HexoSite.sh</code> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"></div><div class="line"><span class="comment">#修改站点架构设置 title author language url permalink</span></div><div class="line">sed <span class="_">-ne</span> <span class="string">'/# Site/ &#123;p; r HexoSite'</span> <span class="_">-e</span> <span class="string">':a; n; /^permalink_defaults/ &#123;p; b&#125;; ba&#125;; p'</span> -i <span class="variable">$1</span>/_config.yml</div><div class="line"></div><div class="line"><span class="comment">#替换主题</span></div><div class="line">sed <span class="string">"s/^theme.*/theme: <span class="variable">$2</span>/"</span> -i <span class="variable">$1</span>/_config.yml</div></pre></td></tr></table></figure></p>
-<p>例如 <code>./HexoSite.sh /2T/smb/git/hexo landscape</code> 是本博客的定制命令。其中 <code>HexoSite</code> 的内容为</p>
+<p>网站的架构配置文件为 <code>/hexo-dir/_config.yml</code> 文件，在 <a href="/Blog/20160902instHexo.html#准备开博啦">自学 Hexo 搭建 GitHub 免费 Blog</a> 里只是简单的修改，这里给出更完整的脚本 <code>HexoSite.sh</code> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"></div><div class="line"><span class="comment">#修改站点架构设置 title author language url permalink</span></div><div class="line">sed <span class="_">-ne</span> <span class="string">'/# Site/ &#123;p; r HexoSite'</span> <span class="_">-e</span> <span class="string">':a; n; /^permalink_defaults/ &#123;p; b&#125;; ba&#125;; p'</span> -i <span class="variable">$1</span>/_config.yml</div><div class="line"></div><div class="line"><span class="comment">#替换主题</span></div><div class="line">sed <span class="string">"s/^theme.*/theme: <span class="variable">$2</span>/"</span> -i <span class="variable">$1</span>/_config.yml</div></pre></td></tr></table></figure></p>
+<p>ooNoIndent00其中 <code>HexoSite</code> 的内容为</p>
 <blockquote>
 <p>title: 灯塔 · 随记随想<br>
 subtitle:<br>
@@ -116,78 +343,89 @@ url: https://maxchendt.github.io/<br>
 root: /<br>
 permalink: Blog/:year:month:day:title.html</p>
 </blockquote>
-<p>需要补充的是 <code>permalink</code> 设置下，将博文默认的 <code>2016/09/02/instHexo/index.html</code> 修改为 <code>Blog/20160902instHexo.html</code>，避免建立繁杂目录结构，将博文按时间和标题命名后统一保存在 Blog 目录下。</p>
-<p>特别提醒：手动方式修改时， <code>yml</code> 配置文件的冒号后必须有一个空格。</p>
-<p>本小节相关代码文件为 <a href="/files/HexoSite.tar.gz">HexoSite.tar.gz</a>，下载后解开， 只需要修改 <code>HexoSite</code> 文本即可，再执行<code>./HexoSite.sh hexo-dir landscape</code> 即可 (第一个参数为 Hexo 目录，第二个参数为主题)。</p>
+<p>ooNoIndent00需要补充的是 <code>permalink</code> 设置下，将博文默认的 <code>2016/09/02/instHexo/index.html</code> 修改为 <code>Blog/20160902instHexo.html</code>，避免建立繁杂目录结构，将博文按时间和标题命名后统一保存在 Blog 目录下。</p>
+<p>本小节相关代码文件为 <a href="/files/HexoSite.tar.gz">HexoSite.tar.gz</a>，下载后解开， 只需要修改 <code>HexoSite</code> 文本即可，再执行</p>
+<pre><code>./HexoSite.sh /hexo-dir landscape</code></pre>
+<p>ooNoIndent00即可 (第一个参数为 Hexo 目录，第二个参数为主题)。</p>
+<p><strong>特别提醒</strong>：手动方式修改时， <code>yml</code> 配置文件的冒号后必须有一个空格。</p>
 <h3 id="更换渲染器">更换渲染器</h3>
-<p>Hexo 默认的渲染器为 marked (hexo-renderer-marked) 渲染器。该渲染器仅支持 md 的基本规范，比如我喜欢使用脚注<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>，基本规范里是不支持的。 因此，经过多日的探索，我发现使用 pandoc 进行渲染，让我心花怒放 (我是 2016-09-12 日启用她的)</p>
+<p>Hexo 默认的渲染器为 marked (hexo-renderer-marked) 渲染器。该渲染器仅支持 md 的基本规范，比如我喜欢使用脚注<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>，基本规范里是不支持的。 因此，经过多日的探索，我发现使用 pandoc 进行渲染，让我心花怒放 (我是 2016-09-12 日启用她的。需先安装 <a href="https://github.com/jgm/pandoc" target="_blank" rel="external">pandoc</a> 软件， 例如安装<a href="https://github.com/jgm/pandoc/releases/download/1.17.2/pandoc-1.17.2-1-amd64.deb" target="_blank" rel="external">版本 1.17.2</a> 到操作系统中)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm un hexo-renderer-marked --save</div><div class="line">npm install hexo-renderer-pandoc --save</div></pre></td></tr></table></figure>
-<p>卸载默认的 marked 渲染器， 安装 pandoc 渲染器。使用了 pandoc 进行渲染后，写博客简直就是一种乐趣。</p>
+<p>ooNoIndent00卸载默认的 marked 渲染器， 安装 pandoc 渲染器。使用了 pandoc 进行渲染后，写博客简直就是一种乐趣。Pandoc is a universal document converter, 她真的不是一般的牛！对 md 扩展支持让我拜倒，例如脚注的支持部分 <a href="http://pandoc.org/MANUAL.html#footnotes" class="uri" target="_blank" rel="external">http://pandoc.org/MANUAL.html#footnotes</a> 。</p>
 <p>关于脚注的支持，<a href="https://github.com/LouisBarranqueiro/hexo-footnotes" target="_blank" rel="external">hexo-footnotes</a> 真的是误人子弟，太粗糙了，脚注要人工编号，也不支持 inline 脚注。我给他发了个 issue 之后，他终止了该项目，转而推荐改用 Markdown-it (hexo-renderer-markdown-it)。实际上， 早在尝试 pandoc 渲染器 之前就测试过 <a href="https://github.com/markdown-it/markdown-it" target="_blank" rel="external">Markdown-it</a> 了， 它对脚注等支持体验不佳，不仅需要改变渲染器，并且配置复杂，此外还需要 <a href="https://github.com/markdown-it/markdown-it-footnote" target="_blank" rel="external">markdown-it-footnote</a> 插件。</p>
-<p>Pandoc is a universal document converter, 她真的不是一般的牛！对 md 扩展支持让我拜倒，例如脚注的支持部分 <a href="http://pandoc.org/MANUAL.html#footnotes" class="uri" target="_blank" rel="external">http://pandoc.org/MANUAL.html#footnotes</a> 。</p>
 <p>需要提醒的是：pandoc 渲染器对 md 的格式要求更加规范些，例如 链接需要用<code>&lt; &gt;</code>括号显式包含；quoteblock 每行必须跟两空格表示换行(如果后续行没有<code>&gt;</code>标记的话)。诸如此类的，写两篇 md 博文，也就明白了 (指导硕、博研究生时，我也是要求他们在做中学，这里是不是也改成脚注？)。当然，把 <a href="http://pandoc.org/MANUAL.html#pandocs-markdown" target="_blank" rel="external">Pandoc’s Markdown</a> 浏览一下是很有必要的，或者 <a href="http://pandoc.org/MANUAL.pdf" target="_blank" rel="external">pdf 版本</a>。</p>
 <h2 id="landscape-主题定制">Landscape 主题定制</h2>
-<p>本节的全部配置打包为 <a href="/files/HexoLandscape.tar.xz">HexoLandscape.tar.xz</a>, 解开后执行 <code>./fixLandscape.sh /hexo-dri/themes/landscape</code> , 将实现</p>
+<p>本节的全部配置打包为 <a href="/files/HexoLandscape.tar.xz">HexoLandscape.tar.xz</a>, 解开后执行</p>
+<pre><code>./fixLandscape.sh /hexo-dir/themes/landscape</code></pre>
+<p>ooNoIndent00将实现</p>
 <ol style="list-style-type: decimal">
 <li>功能方面的扩展：如数学公式显示和留言评论</li>
 <li>数字编号：博文章节编号，视觉上感受层次清晰</li>
 <li>页面布局：目录，横幅(banner)图片, 主区域布局调整</li>
 <li>显示样式：引文样式, 代码块加圆角, 行内代码颜色</li>
 </ol>
-<p>脚本 <code>fixLandscape.sh</code> 基本上是调用 <code>sed</code> 命令，修改相应的配置文件。感兴趣的话建议读一下其中的 ReadMe.txt 文件，自行查看源代码，博文中不再重复，其中有关 <code>sed</code> 命令的语句建议参考 <a href="http://www.grymoire.com/Unix/Sed.html" target="_blank" rel="external">Sed - An Introduction and Tutorial by Bruce Barnett</a>。</p>
+<p>ooNoIndent00脚本 <code>fixLandscape.sh</code> 基本上是调用 <code>sed</code> 命令，修改相应的配置文件。感兴趣的话建议读一下其中的 ReadMe.txt 文件，自行查看源代码，博文中不再重复，其中有关 <code>sed</code> 命令的语句建议参考 <a href="http://www.grymoire.com/Unix/Sed.html" target="_blank" rel="external">Sed - An Introduction and Tutorial by Bruce Barnett</a>。</p>
 <h3 id="数学">数学</h3>
-<p>首先，数学公式的网页显示<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>，对我非常重要 (博客肩负教学和科研的任务) Simple inline <span class="math inline">\(a = b + c\)</span>. And block math: Black-Schole<span class="math display">\[
+<p>数学公式的网页显示<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>，对我非常重要 (博客肩负教学和科研的任务) Simple inline <span class="math inline">\(a = b + c\)</span>. And block math: Black-Schole<span class="math display">\[
 c=S_{t}N\left(  d_{1}\right)  -e^{-r(T-t)}KN\left(  d_{2}\right) \]</span> with <span class="math display">\[
 d_{1}=\frac{\ln\left(  S_{t}/K\right)  +\left(  r+\sigma^{2}/2\right)
-(T-t)}{\sigma\sqrt{T-t}}\qquad d_{2}=d_{1}-\sigma\sqrt{T-t}\]</span> 这种称为行间公式哦。只要有 LaTeX 基础，理解这些公式就很简单：比如其中的 <span class="math inline">\(d_{1}=\frac{\ln\left( S_{t}/K\right) +\left( r+\sigma^{2}/2\right) (T-t)}{\sigma\sqrt{T-t}}\)</span> 的源代码为</p>
-<pre><code>d_{1}=\frac{\ln\left(  S_{t}/K\right)  +\left(  r+\sigma^{2}/2\right)(T-t)}{\sigma\sqrt{T-t}}</code></pre>
-<p>Bug 提醒：https://github.com/hexojs/hexo/issues/2064 提到了 连续两个花括号的问题，即 <code>{ {</code>。处理方式为</p>
+(T-t)}{\sigma\sqrt{T-t}}\qquad d_{2}=d_{1}-\sigma\sqrt{T-t}\]</span> 这种称为行间公式哦。只要有 LaTeX 基础，理解这些公式就很简单：比如其中的 <span class="math inline">\(d_{1}=\frac{\ln( S_{t}/K) +( r+\sigma^{2}/2) (T-t)}{\sigma\sqrt{T-t}}\)</span> 的源代码为</p>
+<pre><code>d_{1}=\frac{\ln(S_{t}/K)  +(r+\sigma^{2}/2)(T-t)}{\sigma\sqrt{T-t}}</code></pre>
+<p>Bug 提醒：<a href="https://github.com/hexojs/hexo/issues/2064" target="_blank" rel="external">hexo issues/2064</a> 提到了 连续两个花括号的问题，即 <code>{ {</code>。处理方式为</p>
 <ol style="list-style-type: decimal">
 <li>表达式 <span class="math inline">\(EI=\{ {EI}_1,{EI}_2,\cdots,{EI}_V\}\)</span> 代码为 <code>$EI=\{ {EI}_1,{EI}_2,\cdots,{EI}_V\}$</code> (使用 <code>\</code> 保留外层花括号)，当然，我是避免使用多字母的变量名的。</li>
-<li>表达式 <span class="math inline">\(\mathrm{cov}_{t_{b}}^{ {}}\left( S(t_{c}),F(t_{c})\right)\)</span> 中使用了空上标，是为了<span class="math inline">\(t_{b}\)</span>的位置显更低些，代码为 <code>$\mathrm{cov}_{t_{b}}^{ {}}\left(  S(t_{c}),F(t_{c})\right)$</code>(连续两个花括号中间插入空格)。当然，空上标也可以表示成 <code>^{}</code> ， 例如 <span class="math inline">\(\mathrm{cov}_{t_{b}}^{}\left( S(t_{c}),F(t_{c})\right)\)</span> 。这个对我有点影响，因为我用 <a href="https://www.mackichan.com" target="_blank" rel="external">SWP</a> 版本 5 来录入<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>数学公式，拷贝到 md 文件里面，需要清除无用的空组。</li>
+<li>表达式 <span class="math inline">\(\mathrm{cov}_{t_{b}}^{ {}}\left( S(t_{c}),F(t_{c})\right)\)</span> 中使用了空上标，是为了<span class="math inline">\(t_{b}\)</span>的位置显更低些，代码为 <code>$\mathrm{cov}_{t_{b}}^{ {}}\left(  S(t_{c}),F(t_{c})\right)$</code>(连续两个左花括号中间插入空格)。测试表明，本博客中空上标 <code>^{ {}}</code> 无效果，应该改成 <code>^{\,}</code>， 例如 <span class="math inline">\(y_{H}^{\,}\)</span> (对比无空上标的 <span class="math inline">\(y_{H}\)</span>, 使用空上标时下标 <span class="math inline">\(H\)</span> 的位置降低了一点点，美观一些)。这个对我有点影响，因为我用 <a href="https://www.mackichan.com" target="_blank" rel="external">SWP</a> 版本<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> 5 来录入数学公式，拷贝到 md 文件里面，需要预处理空上标里的空组。</li>
 </ol>
 <h3 id="留言评论">留言评论</h3>
-<p>看客们往往有话要说，或者想每到一处，到此一游，留个脚印。对于博主来说，也是好事，有些留言评论是言者无意，听者有心啊。Hexo 支持多种方式的留言评论，我选择了 <a href="https://disqus.com" target="_blank" rel="external">Disqus</a> 免费系统。Hexo 博客要启用 Disqus, 需要先到 https://disqus.com 注册并创建 shortname <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>， 创建时选择 “I want to install Disqus on my site” 。然后再进行必要的设置，比如 (请用您的 shortname 替换示例中的 maxchendt): 进入 <a href="https://maxchendt.disqus.com/admin/settings/general/" class="uri" target="_blank" rel="external">https://maxchendt.disqus.com/admin/settings/general/</a> 页面里将 “Website URL” 设置为 <code>https://maxchendt.github.io</code> 等等。</p>
-<p>提示: 如果要使用 HexoLandscape.tar.xz 中的脚本，请修改其中 Disqus 文件里的 <code>maxchendt</code> 替换成您的 shortname，唯一需要修改的地方。</p>
+<p>看客们往往有话要说，或者想每到一处，到此一游，留个脚印。对于博主来说，也是好事，有些留言评论是言者无意，听者有心啊。Hexo 支持多种方式的留言评论，我选择了 <a href="https://disqus.com" target="_blank" rel="external">Disqus</a> 免费系统。Hexo 博客要启用 Disqus, 需要先到 https://disqus.com 注册并创建 shortname <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>， 创建时选择 “I want to install Disqus on my site” 。然后再进行必要的设置，比如 (请用您的 shortname 替换示例中的 maxchendt): 进入 <a href="https://maxchendt.disqus.com/admin/settings/general/" target="_blank" rel="external">disqus.com settings/general</a> 页面里将 “Website URL” 设置为 <code>https://maxchendt.github.io</code> 等等。</p>
+<p>提示: 如果要使用 <a href="/files/HexoLandscape.tar.xz">HexoLandscape.tar.xz</a> 中的脚本，请修改其中 Disqus 文件里的 <code>maxchendt</code> 替换成您的 shortname，这是唯一需要修改的地方。</p>
+<p>补 (2016-10-09 22:03)：<a href="https://github.com/hexojs/hexo-theme-landscape/pull/40" target="_blank" rel="external">theme-landscape pull/40</a> 提到 “It is expected disqus_shortname is located in Hexo’s _config.yml”. 而我们这里修改的是主题的 <code>_config.yml</code>, 因此建议将 <code>layout/_partial/</code> 里的 <code>after-footer.ejs</code> 和 <code>article.ejs</code> 文件中的 <code>config.disqus_shortname</code> 全部替换为 <code>theme.disqus_shortname</code>。个人认为，landscape 主题还有待完善。</p>
 <h3 id="章节编号">章节编号</h3>
 <p>当前似乎比较流行没有章节编号，只是字体不同(大小、字形等)。对于这里排版，我是很不喜欢的，阅读到中间，不知今昔是何年的感觉，分不清纲要层次。博文页面中，显示出章节编号是很容易的，完全不需要那么懒惰，而找一大堆理由进行苍白无力地搪塞。</p>
-<p>设置的相关代码为 <code>numHeading</code>，我是到 <a href="https://github.com/3meng/3meng.github.io/issues/1" class="uri" target="_blank" rel="external">https://github.com/3meng/3meng.github.io/issues/1</a> 进行请教的，不到两个小时，就得到回应了。显然，我们要保持像小朋友那样，有问题就提问。当然，不仅要敢提问，还要学会提问，善于提问。</p>
-<p>Hexo 是支持目录的, 可惜 Landscape 主题并没有默认进行支持。配置代码<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>为 <code>ToC</code>, 相应的样式为 <code>ToC-CSS</code>。如果博文要显示目录，需要在 front-matter (文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量) 添加 <code>toc: true</code>。开心的是，我喜欢的 Next 主题默认支持目录，不需要任何额外工作。</p>
+<p>设置的相关代码为 <code>numHeading</code>，我是到 <a href="https://github.com/3meng/3meng.github.io/issues/1" target="_blank" rel="external">3meng issues/1</a> 进行请教的，不到两个小时，就得到回应了。显然，我们要保持像小朋友那样，有问题就提问。当然，不仅要敢提问，还要学会提问，善于提问。</p>
+<p>Hexo 是支持目录的, 可惜 Landscape 主题并没有默认进行支持。配置代码<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>为 <code>ToC</code>, 相应的样式为 <code>ToC-CSS</code>。如果博文要显示目录，需要在 front-matter (文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量) 添加 <code>toc: true</code>。开心的是，我喜欢的 NexT 主题默认支持目录，不需要任何额外工作。</p>
 <h3 id="布局和样式">布局和样式</h3>
 <p>整个页面中， banner (横幅) 图片最需要调整，首先是更换成与博主相关的，其次是不需要占据那么大的篇幅。图片 <code>Lighthouse.jpg</code> 是从网上找到的大风暴中、惊涛骇浪中的灯塔，再经过简单处理得到的。只有经历了风浪之后，感觉平静特别的美好。</p>
-<p>主区域布局中，默认为 3:1，博文区相对教小，调整为 5:1，边栏毕竟是辅助性质的，太大了喧宾夺主。</p>
-<p>样式的修改</p>
+<p>主区域布局中，默认为 3:1，博文区相对教小，调整为 5:1，边栏毕竟是辅助性质的，太大了喧宾夺主。关于样式的修改</p>
 <ol style="list-style-type: decimal">
-<li>引文样式: Landscape 主题默认的引文样式感觉是为诗人设定的， 不信到这里瞧瞧: <a href="https://hexo.io/hexo-theme-landscape/2013/12/25/tag-plugins/" class="uri" target="_blank" rel="external">https://hexo.io/hexo-theme-landscape/2013/12/25/tag-plugins/</a> , 字体比正文还大，而且居中，太文学了，恕我难以接受。因此，采用 <code>QuoteBlock</code> 文件里面的 CSS 片段进行修改。</li>
+<li>引文样式: Landscape 主题默认的引文样式感觉是为诗人设定的， 不信到这里瞧瞧: <a href="https://hexo.io/hexo-theme-landscape/2013/12/25/tag-plugins/" target="_blank" rel="external">landscape tag-plugins</a>, 字体比正文还大，而且居中，太文学了，恕我难以接受。因此，采用 <code>QuoteBlock</code> 文件里面的 CSS 片段进行修改。</li>
 <li>突出显示部分 (highlight): 代码块加圆角 以及行内代码颜色修改。</li>
 </ol>
 <h2 id="小技巧">小技巧</h2>
-<p>小小技巧，帮大忙。Hexo 在 <a href="https://hexo.io/docs/tag-plugins.html" class="uri" target="_blank" rel="external">https://hexo.io/docs/tag-plugins.html</a> 给出了不少有用的 Tag Plugins, 如插入图片，插入代码片段等， 短小精悍，犹如小匕首，这里演示一下插入 Youtube 视频。此外，当使用 https 方式的 <code>git</code> 命令时，可以让用户和密码记住一段时间，该时间段内 <code>git</code> 操作不再需要输入用户名和密码。</p>
+<p>小小技巧，帮大忙。Hexo 给出了不少有用的 <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="external">Tag Plugins</a>, 如插入图片，插入代码片段等， 短小精悍，犹如小匕首，这里演示一下插入 Youtube 视频。此外，当使用 https 方式的 <code>git</code> 命令时，可以让用户和密码记住一段时间，该时间段内 <code>git</code> 操作不再需要输入用户名和密码。</p>
 <h3 id="youtube-视频">youtube 视频</h3>
 <p>本博客的重要目的之一就是教学，当然要能方便的链接到 Youtube 的视频。 Hexo 的 Tag Plugins 提供直接插入 Youtube 视频的方法，例如 <code> {% youtube RiF6m3InMRM %} </code> (这里使用了 Hexo 的 <code>raw</code> tag) 将插入十年前 (2006年) 的讲课视频如下 <div class="video-container"><iframe src="//www.youtube.com/embed/RiF6m3InMRM" frameborder="0" allowfullscreen></iframe></div></p>
-<p>这种方式得到的视频框是 responsive 的，即视频框大小随浏览器窗口自动调节。如果想要得到固定大小的视频框，例如</p>
+<p>ooNoIndent00这种方式得到的视频框是 responsive 的，即视频框大小随浏览器窗口自动调节。如果想要得到固定大小的视频框，例如</p>
 <iframe width="320" height="180" src="https://www.youtube.com/embed/RiF6m3InMRM" frameborder="0" allowfullscreen>
 </iframe>
-<p>视频框大小为 320x180, 相应的代码为 (直接插入 html 代码) <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;iframe width=&quot;320&quot; height=&quot;180&quot; src=&quot;https://www.youtube.com/embed/RiF6m3InMRM&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="临时免密码">临时免密码</h3>
-<p>在 <a href="/Blog/20160902instHexo.html#Deploy">自学 Hexo 搭建 GitHub 免费 Blog</a> 中，我建议用 https 协议提交网站内容到 GitHub 中。这带来一个问题，每次 commit 更新时，总要求输入用户名和密码。<a href="https://stackoverflow.com/questions/6565357" class="uri" target="_blank" rel="external">https://stackoverflow.com/questions/6565357</a> 给出了一些处理方法，我推荐的是 <a href="https://help.github.com/articles/caching-your-github-password-in-git/" class="uri" target="_blank" rel="external">https://help.github.com/articles/caching-your-github-password-in-git/</a> 里的方法</p>
+<p>ooNoIndent00视频框大小为 320x180, 相应的代码为 (直接插入 html 代码，视频框还可以<a href="/Blog/20160910TDayA.html#塔哥">居中</a>) <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;iframe width=&quot;320&quot; height=&quot;180&quot; src=&quot;https://www.youtube.com/embed/RiF6m3InMRM&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="缓存密码">缓存密码</h3>
+<p>在 <a href="/Blog/20160902instHexo.html">自学 Hexo 搭建 GitHub 免费 Blog</a> 中，我建议用 https 协议 (<a href="/Blog/20160902instHexo.html#Deploy">deploy.sh</a>) 提交网站内容到 GitHub 中。这带来一个问题，每次 commit 更新时，总要求输入用户名和密码。<a href="https://stackoverflow.com/questions/6565357" target="_blank" rel="external">stackoverflow 6565357</a> 给出了一些处理方法，我推荐的是 <a href="https://help.github.com/articles/caching-your-github-password-in-git/" target="_blank" rel="external">github caching</a> 里的方法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git config --global credential.helper cache</div><div class="line">git config --global credential.helper <span class="string">'cache --timeout=1296000'</span></div><div class="line"><span class="comment">#129600/3600/24 = 15 days</span></div></pre></td></tr></table></figure>
-<p>用户名和密码加密保存在内存中 15 天，该期间 <code>git commit</code> 免输入 GitHub 的用户名和密码。</p>
+<p>ooNoIndent00用户名和密码加密保存在内存中 15 天，该期间 <code>git commit</code> 免输入 GitHub 的用户名和密码。</p>
 <h3 id="read-more-按钮">Read More 按钮</h3>
-<p>博文越来越多后，首页显示多篇博文是很不友善的，每篇博文只需要显示一小部分，感兴趣的人可以点击 <code>Read More</code> (阅读全文) 按钮，实现的方法是在截断处插入 <code>&lt;!--more--&gt;</code> 。如果想让简介部分更加引人入胜，Next 主题下可以在 Front-matter 里面加入 <code>description</code> 字段， Hexo 将优先使用 description 字段的内容 (Landscape 主题下还不行)。</p>
+<p>博文越来越多后，首页显示多篇博文是很不友善的，每篇博文只需要显示一小部分，感兴趣的人可以点击 <code>Read More</code> (阅读全文) 按钮，实现的方法是在截断处插入 <code>&lt;!--more--&gt;</code> 。如果想让简介部分更加引人入胜，NexT 主题下可以在 Front-matter 里面加入 <code>description</code> 字段， Hexo 将优先使用 description 字段的内容 (Landscape 主题下还不行)。</p>
 <hr>
 <p><strong>后言</strong></p>
-<p>当时使用 Landscape 主题，只是因为她是默认主题。稍微有点了解之后，发现还不尽人意。因此，早在教师节之前，就在 Next 主题下干活了 (<a href="https://github.com/3meng/3meng.github.io/issues/1#issuecomment-246157217" target="_blank" rel="external">证据</a> )。三周之后，将本文由简要的梗概，充实整理完稿。不难发现，本博文是在 Next 主题定制之后，再返回到 Landscape 主题中修缮完稿的。</p>
-<p>尽管我将专注于 Next 主题，但我对 landscape 主题的配置设定仍然花了点时间进行整理，写成脚本。这带来诸多好处 1. 作为记录 2. 如果什么时候需要测试一下 landscape 主题，或者对其新版本感兴趣，该脚本可以直接用，或者小修改后使用 3. 他人可以使用，并进行改进</p>
+<p>当时使用 Landscape 主题，只是因为她是默认主题。稍微有点了解之后，发现还不尽人意。因此，早在教师节之前，就在 NexT 主题下干活了 (<a href="https://github.com/3meng/3meng.github.io/issues/1#issuecomment-246157217" target="_blank" rel="external">证据</a> )。三周之后，将本文由简要的梗概，充实整理完稿。不难发现，本博文是在 NexT 主题定制之后，再返回到 Landscape 主题中修缮完稿的。</p>
+<p>尽管我将专注于 NexT 主题，但我对 landscape 主题的配置设定仍然花了点时间进行整理，写成脚本。这带来诸多好处</p>
+<ol style="list-style-type: decimal">
+<li>作为记录</li>
+<li>手工操作容易出错、遗漏等</li>
+<li>他人可以使用，并进行改进</li>
+<li>万一需要测试 landscape 主题，或者对其新版本感兴趣，该脚本可以直接用，或者小修改后使用</li>
+<li>采用脚本的方式来修改，使用者一目了然。给出完整配置文件的方式，例如这个教程里的<a href="http://www.jianshu.com/p/c23902f93558" target="_blank" rel="external">配置</a>，以及另一例子给出<a href="https://lovenight.github.io/2015/11/10/Hexo-3-1-1-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/#更换主题" target="_blank" rel="external">完整 yml 文件</a>，不免拖沓冗长，让人一头雾水，不知道该在哪儿改动</li>
+</ol>
 <hr>
 <p><strong>更新历史</strong><br>
+2016-10-08 19:19 NexT 主题<br>
 2016-10-01 22:14 完稿、公开发布<br>
 2016-09-07 10:56 草稿，备忘录状态</p>
 <div class="footnotes">
 <hr>
 <ol>
-<li id="fn1"><p>脚注尽管用的不多，但有时候脚注特别有用，有些内容特别适合在脚注表达，例如<a href="/Blog/20160910TDayA.html">教师节乱想</a>里面，有脚注就很好，不用脚注就很难受。Next 主题下，本博客已经实现脚注小贴士了，即鼠标停留在脚注标记上方，将显示脚注内容。网页上跳转看脚注，显然不符号阅读习惯。<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>配置文件 mathjax.js (非纯 js 代码) 修改自 Next 主题的 mathjax.swig文件。<a href="#fnref2">↩</a></p></li>
+<li id="fn1"><p>脚注尽管用的不多，但有时候脚注特别有用，有些内容特别适合在脚注表达，例如<a href="/Blog/20160910TDayA.html">教师节乱想</a>里面，有脚注就很好，不用脚注就很难受。NexT 主题下，本博客已经实现脚注小贴士了，即鼠标停留在脚注标记上方，将显示脚注内容。网页上跳转看脚注，显然不符号阅读习惯。<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>配置文件 mathjax.js (非纯 js 代码) 修改自 NexT 主题的 mathjax.swig文件。<a href="#fnref2">↩</a></p></li>
 <li id="fn3"><p>不喜欢 SWP 6, 我只是用 SWP 5 来写作，然后用 TeXLive 编译。SWP 从版本 6 开始，保存的文件默认不是 TeX 文本，此外还不稳定，容易崩溃。唉，升级是免费的，大概是因为容易崩溃？说句题外话，他们可能一步想进入共产主义，来次大飞跃，这种梦想，从来都是失败告终，就软件行业，Microsoft Vista 就是一个例子。SWP 6 的开发超过十年，一开始他们发布的信息就是要横跨 Windows, Linux, OSX 等平台，结果拖拉了十多年的时间，“早产”出先天不足的 SWP 6， 对用户，对公司，都很悲摧。<a href="#fnref3">↩</a></p></li>
 <li id="fn4"><p>参阅 <a href="https://help.disqus.com/customer/portal/articles/466208" target="_blank" rel="external">What's a shortname?</a><a href="#fnref4">↩</a></p></li>
 <li id="fn5"><p>参考 <a href="http://aresxiong.com/2015/12/05/tools_hexo_article_contents/" target="_blank" rel="external">为 Hexo 博客文章添加目录</a> : 天下文章一大抄，抄的过程有提高。我是从该博文“偷”来的。生活在 Internet 时代，勤“问”善“偷”，人生真爽 ── 对酒当歌，人生几何<a href="#fnref5">↩</a></p></li>
@@ -196,200 +434,322 @@ d_{1}=\frac{\ln\left(  S_{t}/K\right)  +\left(  r+\sigma^{2}/2\right)
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://maxchendt.github.io/Blog/20160907HexoSet.html" data-id="ciu2lpd220000oc4pa1nlildb" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LaTeX/">LaTeX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/landscape-主题/">landscape 主题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/评论/">评论</a></li></ul>
 
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/landscape-主题/" rel="tag">#landscape 主题</a>
+          
+            <a href="/tags/LaTeX/" rel="tag">#LaTeX</a>
+          
+            <a href="/tags/评论/" rel="tag">#评论</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Blog/20160902instHexo.html" rel="next" title="自学 Hexo 搭建 GitHub 免费 Blog">
+                <i class="fa fa-chevron-left"></i> 自学 Hexo 搭建 GitHub 免费 Blog
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Blog/20160910TDayA.html" rel="prev" title="教师节乱想">
+                教师节乱想 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
     </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
-  
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
     
-<nav id="article-nav">
-  
-    <a href="/Blog/20160910TDayA.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
         
-          教师节乱想
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CHEN Deng-Ta" />
+          <p class="site-author-name" itemprop="name">CHEN Deng-Ta</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-基本定制"><span class="nav-number">1.</span> <span class="nav-text">Hexo 基本定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#架构配置"><span class="nav-number">1.1.</span> <span class="nav-text">架构配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换渲染器"><span class="nav-number">1.2.</span> <span class="nav-text">更换渲染器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#landscape-主题定制"><span class="nav-number">2.</span> <span class="nav-text">Landscape 主题定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数学"><span class="nav-number">2.1.</span> <span class="nav-text">数学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#留言评论"><span class="nav-number">2.2.</span> <span class="nav-text">留言评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#章节编号"><span class="nav-number">2.3.</span> <span class="nav-text">章节编号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布局和样式"><span class="nav-number">2.4.</span> <span class="nav-text">布局和样式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小技巧"><span class="nav-number">3.</span> <span class="nav-text">小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#youtube-视频"><span class="nav-number">3.1.</span> <span class="nav-text">youtube 视频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存密码"><span class="nav-number">3.2.</span> <span class="nav-text">缓存密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#read-more-按钮"><span class="nav-number">3.3.</span> <span class="nav-text">Read More 按钮</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-    </a>
-  
-  
-    <a href="/Blog/20160902instHexo.html" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">自学 Hexo 搭建 GitHub 免费 Blog</div>
-    </a>
-  
-</nav>
+    </main>
 
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-</article>
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CHEN Deng-Ta</span>
+</div>
 
-</section>
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
         
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li></ul>
-    </div>
-  </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LaTeX/">LaTeX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Remarkable-md-编辑器/">Remarkable md 编辑器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape-主题/">landscape 主题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教师节/">教师节</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/评论/">评论</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a> <a href="/tags/Remarkable-md-编辑器/" style="font-size: 10px;">Remarkable md 编辑器</a> <a href="/tags/landscape-主题/" style="font-size: 10px;">landscape 主题</a> <a href="/tags/教师节/" style="font-size: 10px;">教师节</a> <a href="/tags/评论/" style="font-size: 10px;">评论</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/Blog/20160910TDayA.html">教师节乱想</a>
-          </li>
-        
-          <li>
-            <a href="/Blog/20160907HexoSet.html">Hexo Blog 网站初步定制</a>
-          </li>
-        
-          <li>
-            <a href="/Blog/20160902instHexo.html">自学 Hexo 搭建 GitHub 免费 Blog</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 CHEN Deng-Ta<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
     </div>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-  </script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-    });
-  </script>
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-
 
 <script type="text/javascript">
-$(document).ready(function(){
-  var $article = $(".article-entry");
-  var count = [0, 0, 0, 0, 0, 0];
-  var mark = [0, 0, 0, 0, 0, 0];
-
-  (function setMark(){
-    var hTag = ["h1", "h2", "h3", "h4", "h5", "h6"];
-    var index = 0;
-    for (var i = 0; i < 6; ++i) {
-      if ($article.children(hTag[i]).length > 0) {
-        ++index;
-        mark[i] = index;
-      }
-    }
-  })();
-
-  $article.children(":header").each(function(){
-    var t = $(this);
-    var pos = 0;
-    switch (t[0].tagName) {
-      case "H1": pos = 0; break;
-      case "H2": pos = 1; break;
-      case "H3": pos = 2; break;
-      case "H4": pos = 3; break;
-      case "H5": pos = 4; break;
-      case "H6": pos = 5; break;
-    }
-
-    var len = mark[pos];
-    if (len < 6) { count[len] = 0; }
-    count[len - 1]++;
-
-    var listStr = count[0] + "";
-    for (var i = 1; i < len; ++i) { listStr += "." + count[i]; }
-    listStr += " ";
-    t.html(listStr + t.html());
-  });
-});
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
-  </div>
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'maxchendt';
+      var disqus_identifier = 'Blog/20160907HexoSet.html';
+      var disqus_title = "Hexo Blog 网站初步定制";
+      var disqus_url = 'https://maxchendt.github.io/Blog/20160907HexoSet.html';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+<script type="text/javascript" src="/js/custom.js"></script>
 </body>
 </html>
