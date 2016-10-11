@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://maxchendt.github.io/Blog/20160907HexoSet.html">
 <meta property="og:site_name" content="灯塔 · 随记随想">
 <meta property="og:description" content="本博文主要讨论 Hexo 默认的 landscape 主题下进行定制: 基础定制部分介绍了网站的架构配置, 以及启用 pandoc 渲染。主题定制方面，介绍了数学公式显示、留言评论、博文章节编号、目录，主区域布局调整和显示样式等的调整。">
-<meta property="og:updated_time" content="2016-10-09T14:03:32.904Z">
+<meta property="og:updated_time" content="2016-10-11T12:38:52.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog 网站初步定制">
 <meta name="twitter:description" content="本博文主要讨论 Hexo 默认的 landscape 主题下进行定制: 基础定制部分介绍了网站的架构配置, 以及启用 pandoc 渲染。主题定制方面，介绍了数学公式显示、留言评论、博文章节编号、目录，主区域布局调整和显示样式等的调整。">
@@ -123,6 +123,16 @@
 <body itemscope itemtype="//schema.org/WebPage" lang="default">
 
   
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85533656-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 
 
@@ -378,8 +388,8 @@ d_{1}=\frac{\ln\left(  S_{t}/K\right)  +\left(  r+\sigma^{2}/2\right)
 </ol>
 <h3 id="留言评论">留言评论</h3>
 <p>看客们往往有话要说，或者想每到一处，到此一游，留个脚印。对于博主来说，也是好事，有些留言评论是言者无意，听者有心啊。Hexo 支持多种方式的留言评论，我选择了 <a href="https://disqus.com" target="_blank" rel="external">Disqus</a> 免费系统。Hexo 博客要启用 Disqus, 需要先到 https://disqus.com 注册并创建 shortname <a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>， 创建时选择 “I want to install Disqus on my site” 。然后再进行必要的设置，比如 (请用您的 shortname 替换示例中的 maxchendt): 进入 <a href="https://maxchendt.disqus.com/admin/settings/general/" target="_blank" rel="external">disqus.com settings/general</a> 页面里将 “Website URL” 设置为 <code>https://maxchendt.github.io</code> 等等。</p>
-<p>提示: 如果要使用 <a href="/files/HexoLandscape.tar.xz">HexoLandscape.tar.xz</a> 中的脚本，请修改其中 Disqus 文件里的 <code>maxchendt</code> 替换成您的 shortname，这是唯一需要修改的地方。</p>
-<p>补 (2016-10-09 22:03)：<a href="https://github.com/hexojs/hexo-theme-landscape/pull/40" target="_blank" rel="external">theme-landscape pull/40</a> 提到 “It is expected disqus_shortname is located in Hexo’s _config.yml”. 而我们这里修改的是主题的 <code>_config.yml</code>, 因此建议将 <code>layout/_partial/</code> 里的 <code>after-footer.ejs</code> 和 <code>article.ejs</code> 文件中的 <code>config.disqus_shortname</code> 全部替换为 <code>theme.disqus_shortname</code>。个人认为，landscape 主题还有待完善。</p>
+<p>提示: 如果要使用 <a href="/files/HexoLandscape.tar.xz">HexoLandscape.tar.xz</a> 中的脚本，请修改其中 Disqus 文件里的 <code>maxchendt</code> 替换成您的 shortname，这是唯一需要修改的地方。<em>如果还没有 shortname，请将 Disqus 文本文件的第一行注释掉，即第一行的最前面加入字符</em> <code>#</code>。</p>
+<p>补 (2016-10-09 22:03)：<a href="https://github.com/hexojs/hexo-theme-landscape/pull/40" target="_blank" rel="external">theme-landscape pull/40</a> 提到 “It is expected disqus_shortname is located in Hexo’s _config.yml”. 而我们这里修改的是主题的 <code>_config.yml</code>, 因此建议将 <code>layout/_partial/</code> 里的 <code>after-footer.ejs</code> 和 <code>article.ejs</code> 文件中的 <code>config.disqus_shortname</code> 全部替换为 <code>theme.disqus_shortname</code>。个人认为，landscape 主题还有待完善，代码在主题里，配置也应该放在主题层次，而不是网站架构层次。</p>
 <h3 id="章节编号">章节编号</h3>
 <p>当前似乎比较流行没有章节编号，只是字体不同(大小、字形等)。对于这里排版，我是很不喜欢的，阅读到中间，不知今昔是何年的感觉，分不清纲要层次。博文页面中，显示出章节编号是很容易的，完全不需要那么懒惰，而找一大堆理由进行苍白无力地搪塞。</p>
 <p>设置的相关代码为 <code>numHeading</code>，我是到 <a href="https://github.com/3meng/3meng.github.io/issues/1" target="_blank" rel="external">3meng issues/1</a> 进行请教的，不到两个小时，就得到回应了。显然，我们要保持像小朋友那样，有问题就提问。当然，不仅要敢提问，还要学会提问，善于提问。</p>
@@ -424,8 +434,8 @@ d_{1}=\frac{\ln\left(  S_{t}/K\right)  +\left(  r+\sigma^{2}/2\right)
 <div class="footnotes">
 <hr>
 <ol>
-<li id="fn1"><p>脚注尽管用的不多，但有时候脚注特别有用，有些内容特别适合在脚注表达，例如<a href="/Blog/20160910TDayA.html">教师节乱想</a>里面，有脚注就很好，不用脚注就很难受。NexT 主题下，本博客已经实现脚注小贴士了，即鼠标停留在脚注标记上方，将显示脚注内容。网页上跳转看脚注，显然不符号阅读习惯。<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>配置文件 mathjax.js (非纯 js 代码) 修改自 NexT 主题的 mathjax.swig文件。<a href="#fnref2">↩</a></p></li>
+<li id="fn1"><p>脚注尽管用的不多，但有时候脚注特别有用，有些内容特别适合在脚注表达，例如<a href="/Blog/20160910TDayA.html">教师节乱想</a>里面，有脚注就很好，不用脚注就很难受。NexT 主题下，本博客已经实现脚注小贴士了，即鼠标停留在脚注标记上方，将显示脚注内容。网页上跳转看脚注，显然不符合阅读习惯。<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>配置文件 mathjax.js (非纯 js 代码) 修改自 NexT 主题的 mathjax.swig 文件。<a href="#fnref2">↩</a></p></li>
 <li id="fn3"><p>不喜欢 SWP 6, 我只是用 SWP 5 来写作，然后用 TeXLive 编译。SWP 从版本 6 开始，保存的文件默认不是 TeX 文本，此外还不稳定，容易崩溃。唉，升级是免费的，大概是因为容易崩溃？说句题外话，他们可能一步想进入共产主义，来次大飞跃，这种梦想，从来都是失败告终，就软件行业，Microsoft Vista 就是一个例子。SWP 6 的开发超过十年，一开始他们发布的信息就是要横跨 Windows, Linux, OSX 等平台，结果拖拉了十多年的时间，“早产”出先天不足的 SWP 6， 对用户，对公司，都很悲摧。<a href="#fnref3">↩</a></p></li>
 <li id="fn4"><p>参阅 <a href="https://help.disqus.com/customer/portal/articles/466208" target="_blank" rel="external">What's a shortname?</a><a href="#fnref4">↩</a></p></li>
 <li id="fn5"><p>参考 <a href="http://aresxiong.com/2015/12/05/tools_hexo_article_contents/" target="_blank" rel="external">为 Hexo 博客文章添加目录</a> : 天下文章一大抄，抄的过程有提高。我是从该博文“偷”来的。生活在 Internet 时代，勤“问”善“偷”，人生真爽 ── 对酒当歌，人生几何<a href="#fnref5">↩</a></p></li>
