@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://maxchendt.github.io/Blog/20160907HexoSet.html">
 <meta property="og:site_name" content="灯塔 · 随记随想">
 <meta property="og:description" content="本博文主要讨论 Hexo 默认的 landscape 主题下进行定制: 基础定制部分介绍了网站的架构配置, 以及启用 pandoc 渲染。主题定制方面，介绍了数学公式显示、留言评论、博文章节编号、目录，主区域布局调整和显示样式等的调整。">
-<meta property="og:updated_time" content="2016-10-13T01:23:40.884Z">
+<meta property="og:updated_time" content="2016-10-14T00:43:42.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog 网站初步定制">
 <meta name="twitter:description" content="本博文主要讨论 Hexo 默认的 landscape 主题下进行定制: 基础定制部分介绍了网站的架构配置, 以及启用 pandoc 渲染。主题定制方面，介绍了数学公式显示、留言评论、博文章节编号、目录，主区域布局调整和显示样式等的调整。">
@@ -133,7 +133,6 @@
   ga('create', 'UA-85533656-1', 'auto');
   ga('send', 'pageview');
 </script>
-
 
 
 
@@ -358,7 +357,9 @@ permalink: Blog/:year:month:day:title.html</p>
 <pre><code>./HexoSite.sh /hexo-dir landscape</code></pre>
 <p>ooNoIndent00即可 (第一个参数为 Hexo 目录，第二个参数为主题)。</p>
 <p><strong>特别提醒</strong>：手动方式修改时， <code>yml</code> 配置文件的冒号后必须有一个空格。</p>
-<p>补 (2016-10-12 20:04)：HexoSite.tar.gz 更名为 HexoSite.tar.xz，增加了 Sitemap 配置，<code>hexo g</code> 就能生成 <code>sitemap.xml</code> 文件，提交给 Google Search Console<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> 方便其索引工作，用户更容易搜索到相应的网页。</p>
+<p>补 (2016-10-12 20:04)：HexoSite.tar.gz 更名为 HexoSite.tar.xz，由于增加了 Sitemap 配置</p>
+<pre><code>npm install hexo-generator-sitemap --save</code></pre>
+<p>ooNoIndent00<code>hexo g</code> 就能生成 <code>sitemap.xml</code> 文件，提交给 Google Search Console<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> 方便其索引工作，用户更容易搜索到相应的网页。</p>
 <h3 id="更换渲染器">更换渲染器</h3>
 <p>Hexo 默认的渲染器为 marked (hexo-renderer-marked) 渲染器。该渲染器仅支持 md 的基本规范，比如我喜欢使用脚注<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>，基本规范里是不支持的。 因此，经过多日的探索，我发现使用 pandoc 进行渲染，让我心花怒放 (我是 2016-09-12 日启用她的。需先安装 <a href="https://github.com/jgm/pandoc" target="_blank" rel="external">pandoc</a> 软件， 例如安装<a href="https://github.com/jgm/pandoc/releases/download/1.17.2/pandoc-1.17.2-1-amd64.deb" target="_blank" rel="external">版本 1.17.2</a> 到操作系统中)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm un hexo-renderer-marked --save</div><div class="line">npm install hexo-renderer-pandoc --save</div></pre></td></tr></table></figure>
